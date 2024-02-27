@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashesi iGEM 2024 Project Enhanced</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6ddb90, #fecd1a, #30a14e);
+    background-size: 300% 300%;
+    animation: gradientBG 10s ease infinite;
+    color: #000;
+    overflow-x: hidden; /* Hide horizontal scroll */
+    overflow-y: auto; /* Enable vertical scroll */
+}
+
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background 0.5s, color 0.5s;
+        }
+
+        .navbar a:hover, .navbar a.active {
+            background-color: #247127;
+            color: #ffffff;
+        }
+
+        .main-content {
+            padding:  50px 4vw; ;
+            perspective: 1000px;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+        
+            margin: 10px auto;
+            padding: 15px; /* Reduced padding */
+
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: all 0.5s ease-in-out;
+            position: relative;
+            z-index: 5;
+        }
+
+        .section:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .bio-heading {
+            font-family: 'Roboto Slab', serif;
+            text-align: center;
+            font-weight: 700;
+            color: #006400;
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .media-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .media-content video, .media-content img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+       
+        #animatedBackground {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 50px 3vw;
+            }
+
+            .section {
+                margin: 10px auto;
+            }
+
+            .bio-heading {
+                font-size: 2em;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+   
+    <canvas id="animatedBackground"></canvas>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#project">Project Overview</a>
+        <a href="#team">Team</a>
+        <a href="#achievements">Achievements</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Welcome Heading -->
+        <div class="section bio-heading">
+            Welcome to the Ashesi iGEM 2024 Project Homepage
+        </div>
+
+        <div class="media-content">
+           
+            <video controls autoplay muted loop>
+                <source src="https://rawcdn.githack.com/naomikonlack/WEBTECHGITDEMO/17b9c0e3d198434f5cbf982f885ff44980158ecc/IgemVideo.mp4" type="video/mp4" >
+                Your browser does not support the video tag.
+            </video> 
+        </div>
+
+        <!-- Home Section -->
+        <div id="home" class="section">
+            <!-- Content Container -->
+            <div class="content-container">
+                <!-- Text Content -->
+                <div class="text-content">
+                    <h3>IMPROVED DETECTION</h3>
+                    <h3>CLEAN MINING</h3>
+                    <h3>RECYCLING of Lithium</h3>
+                    <p>Our aim is to use bacteria-based technologies to detect, extract and recycle lithium in a sustainable and efficient way.</p>
+                </div>
+                <!-- Image Content -->
+                <div class="media-content">
+                    <img src="https://rawcdn.githack.com/naomikonlack/WEBTECHGITDEMO/7ace347c55012c8bc19b212aee27ec573e51907f/WhatsApp%20Image%202024-02-26%20at%2023.12.36_6d5182a1.jpg"style="max-width: 50%; display: block; margin: 0 auto; alt="Relevant Image" />
+                </div>
+
+                <div class="text-content">
+                    <h3>In the quiet hum of the university lab, Maya, a visionary bioengineer, stood before her creation: a colony of genetically engineered E. coli, glowing softly like a constellation in petri dishes. Each glow, a potential beacon leading to lithium beneath the earth's surface. Her heart raced as she considered the possibilities. This was her answer to the world's destructive thirst for the metal - a way to extract it without tearing the land apart.
+
+                        "As these bacteria thrive, they will seek out lithium with the gentleness of a whisper, a dance of light beneath our feet," Maya mused, her voice barely above the whir of centrifuges.</h3>
+                </div>
+
+                
+                <div class="media-content">
+                    <img src="https://rawcdn.githack.com/naomikonlack/WEBTECHGITDEMO/7ace347c55012c8bc19b212aee27ec573e51907f/WhatsApp%20Image%202024-02-26%20at%2023.12.36_eff3ee6a.jpg"style="max-width: 50%; display: block; margin: 0 auto; alt="Relevant Image" />
+                </div>
+
+                <div class="text-content">
+                    <h3>Under the vast expanse of the sky, Maya's vision came to life. Rows of small wells punctuated the field, each a gateway for her engineered bacteria to enter the earth. It was a harvest unlike any other. With each passing hour, the bacteria worked silently, accumulating lithium ions, a process invisible to the eye but monumental in its implications.
+
+                        "We're farming lithium without a plow or drill," Maya explained to the group of local farmers watching with skeptical yet hopeful eyes. "The earth need not be wounded to give us its treasures."</h3>
+                </div>
+    
+                <div class="media-content">
+                    <img src="https://rawcdn.githack.com/naomikonlack/WEBTECHGITDEMO/7ace347c55012c8bc19b212aee27ec573e51907f/WhatsApp%20Image%202024-02-26%20at%2023.12.37_bbc08ec5.jpg" style="max-width: 50%; display: block; margin: 0 auto;alt="Relevant Image" />
+                </div>
+
+
+                <div class="text-content">
+                    <h3>In the bustling heart of Accra, surrounded by the cacophony of city life, Maya unveiled her final act: a contraption small enough to fit in her palm, yet powerful enough to change the fate of electronic waste. As she dropped a spent battery into the device, the crowd leaned in. Moments later, the machine chimed, its light a signal of success. The lithium, once locked within the battery's confines, was now free to be reborn.
+
+                        "In our hands lies a revolution," Maya proclaimed, her eyes alight with the fire of determination. "Here, we close the circle, turning waste into wealth, ensuring that the future is one of renewal, not ruin."</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Meet Our Team Section -->
+    <div class="bio-container">
+        <h2 class="bio-heading">Meet Our Team</h2>
+        <div id="team" class="section">
+            <p>An interdisciplinary team of students from Ashesi University, dedicated to making a difference through our iGEM project.</p>
+            <div class="media-content">
+                <img src="https://rawcdn.githack.com/naomikonlack/WEBTECHGITDEMO/a04a88ab310e196e3f2313b667685943e1c3cf91/Team%20_%20AshesiGhana%20-%20iGEM%202023%20and%209%20more%20pages%20-%20Person%201%20-%20Microsoft%E2%80%8B%20Edge%202_26_2024%2010_58_41%20PM.png" alt="Team Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Overview Section -->
+    <div class="bio-container">
+        <h2 class="bio-heading">Project Overview</h2>
+        <div id="project" class="section">
+            <h3>We are redefining lithium extraction for a sustainable future. Conventional mining methods pose significant environmental risks, but our innovative approach using genetically engineered E. coli bacteria offers a solution.
+
+                By harnessing the power of biotechnology, we've developed a method to detect and extract lithium ions from soil using fluorescent bacteria. This environmentally friendly technique not only minimizes harm to the environment but also accelerates land reclamation efforts.
+                
+                Additionally, we're addressing the e-waste crisis, particularly battery waste, by extracting lithium from discarded batteries using E. coli bacteria. This promotes the reuse of recovered lithium, aligning with the principles of a circular economy.
+                
+                Join us in our mission to revolutionize lithium extraction and promote sustainability in the mining industry.</h3>
+            <div class="media-content">
+            </div>
+        </div>
+    </div>
+
+    <!-- Notable Achievements Section -->
+    <div class="bio-container">
+        <h2 class="bio-heading">Notable Achievements</h2>
+        <div id="achievements" class="section">
+            <p>On achievements, you will see more about our key milestones, awards, and recognitions our team has achieved.</p>
+        </div>
+
+        
+    </div>
+
+    <div>
+        <h3>Together, we can build a greener future for generations to come.</h3>
+    </div>
+
+
+    <!-- Footer -->
+<div class="footer">
+    © 2024 Ashesi iGEM Team. All rights reserved.
+
+    </div>
+    </div>
+
+    </div>
+
+
+<!-- Interactive Background Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<script>
+    /* P5.js for creating an interactive background */
+    // Initialize variables for stars or floating shapes
+    let shapes = [];
+
+    function setup() {
+        createCanvas(windowWidth, windowHeight);
+        // Create floating shapes
+        for (let i = 0; i < 100; i++) {
+            shapes.push(new Shape()); 
+        }
+    }
+
+    function draw() {
+        clear(); // Clear the canvas
+        // Display shapes
+        for (let shape of shapes) {
+            shape.move();
+            shape.display();
+        }
+    }
+    class Shape {
+    constructor() {
+        // Random position
+        this.x = random(width);
+        this.y = random(height);
+        // Random size
+        this.size = random(20, 50);
+        // Random speed
+        this.ySpeed = random(-1, 1);
+        this.xSpeed = random(-1, 1);
+    }
+
+    // Method to move the shape
+    move() {
+        this.x += this.xSpeed;
+        this.y += this.ySpeed;
+        // Bounce the shapes off the edges of the canvas
+        if (this.x < 0 || this.x > width) this.xSpeed *= -1;
+        if (this.y < 0 || this.y > height) this.ySpeed *= -1;
+    }
+
+    // Method to display the shape
+    display() {
+        noStroke();
+        fill(255, 255, 255, 150); // Semi-transparent white
+        ellipse(this.x, this.y, this.size);
+    }
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+
+// Listen for click events on navigation links to smoothly scroll to sections
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            document.querySelectorAll('.navbar a').forEach(nav => nav.classList.remove('active'));
+            this.classList.add('active');
+        }
+    });
+});
+</script>
+</body>
+</html>
